@@ -8,43 +8,41 @@ y1 = np.array([10, 15, 13, 17, 20])
 y2 = np.array([8, 12, 14, 16, 18])
 y3 = np.array([6, 10, 12, 14, 17])
 
-# Plot lines (visuals customized inside plot())
-plt.plot(
-    x, y1,
-    color='tab:blue',
-    linestyle='-',
-    linewidth=3,
-    marker='o',
-    markersize=9,
-    markerfacecolor='white',
-    markeredgewidth=2,
-    label='Student A'
-)
+# ---------------- Common properties (shared) ----------------
+common_props = {
+    'linewidth': 3,
+    'markersize': 9,
+    'markerfacecolor': 'white',
+    'markeredgewidth': 2,
+    'alpha': 0.9
+}
 
-plt.plot(
-    x, y2,
-    color='tab:green',
-    linestyle='--',
-    linewidth=3,
-    marker='s',
-    markersize=9,
-    markerfacecolor='white',
-    markeredgewidth=2,
-    label='Student B'
-)
+# ---------------- Individual line properties ----------------
+line1_props = {
+    'color': 'tab:blue',
+    'linestyle': '-',
+    'marker': 'o',
+    'label': 'Student A'
+}
 
-plt.plot(
-    x, y3,
-    color='tab:orange',
-    linestyle='-.',
-    linewidth=3,
-    marker='^',
-    markersize=9,
-    markerfacecolor='white',
-    markeredgewidth=2,
-    label='Student C'
-)
+line2_props = {
+    'color': 'tab:green',
+    'linestyle': '--',
+    'marker': 's',
+    'label': 'Student B'
+}
 
-# Show plot
+line3_props = {
+    'color': 'tab:orange',
+    'linestyle': '-.',
+    'marker': '^',
+    'label': 'Student C'
+}
+
+# ---------------- Plot ----------------
+plt.plot(x, y1, **common_props, **line1_props)
+plt.plot(x, y2, **common_props, **line2_props)
+plt.plot(x, y3, **common_props, **line3_props)
+
 plt.legend()
 plt.show()
