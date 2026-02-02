@@ -1,0 +1,21 @@
+# Matplotlib Setup Guide (Python 3)
+
+## Install Matplotlib
+Run in terminal:
+  pip3 install matplotlib
+
+If you use conda:
+  conda install matplotlib
+
+## Check Installed Version
+In Python, run:
+  import matplotlib
+  print(matplotlib.__version__)
+
+## Verify Installation
+Test with a simple plot:
+  import matplotlib.pyplot as plt
+  plt.plot([1, 2, 3], [1, 4, 2])
+  plt.show()
+
+✅ If a window pops up with a plot, Matplotlib is working correctly.
