@@ -19,3 +19,79 @@ Test with a simple plot:
   plt.show()
 
 ✅ If a window pops up with a plot, Matplotlib is working correctly.
+
+
+Python Matplotlib Plot Customization Note
+================================================
+
+1️⃣ Line Properties
+-------------------
+color           : Line color
+                  Examples: 'blue', 'red', 'green', '#1f77b4', 'tab:orange'
+
+linestyle       : Line style
+                  Examples: '-' (solid), '--' (dashed), '-.' (dash-dot), ':' (dotted)
+
+linewidth / lw  : Line thickness
+                  Examples: 1, 2.5, 3
+
+alpha           : Transparency (0.0 invisible → 1.0 opaque)
+
+zorder          : Drawing order (higher = on top)
+
+2️⃣ Marker Properties
+---------------------
+marker          : Marker shape
+                  Examples: 'o' (circle), 's' (square), '^' (triangle up), '*' (star), 'D' (diamond)
+
+markersize / ms : Size of marker
+                  Examples: 5, 8, 10
+
+markerfacecolor / mfc : Fill color
+                  Examples: 'white', 'blue', 'red'
+
+markeredgecolor / mec : Border color
+                  Examples: 'black', 'blue'
+
+markeredgewidth / mew : Border thickness
+                  Examples: 1, 2
+
+fillstyle       : Marker fill style
+                  Examples: 'full', 'none', 'left', 'right', 'top', 'bottom'
+
+markevery       : Show marker every N points
+                  Examples: 1, 2, or [0,2,4]
+
+3️⃣ Labeling & Legend
+---------------------
+label           : Name for legend
+                  Example: 'Student A'
+
+plt.legend()    : Show legend
+                  Example: loc='upper left', fontsize=12
+
+plt.title()     : Plot title
+                  Example: fontsize=16, fontweight='bold', pad=15
+
+plt.xlabel() / plt.ylabel() : Axis labels
+                  Example: fontsize=12
+
+4️⃣ Grid and Ticks
+------------------
+plt.grid(True)  : Show grid
+                  Example: linestyle='--', alpha=0.5
+
+plt.xticks() / plt.yticks() : Customize ticks
+                  Example: fontsize=11, set values [2021,2022,...]
+
+5️⃣ Tips for Student Motivation / Presentation
+----------------------------------------------
+- Use different colors for each line → easy comparison
+- Use different markers → helps readability
+- Add annotations for highlights:
+      plt.annotate('Great Progress!', xy=(2025, 20), xytext=(2023.5, 18),
+                   arrowprops=dict(arrowstyle='->', linewidth=2))
+- Keep lines smooth and bold for clarity
+- Use legends to clearly label students / series
+
+💡 Pro tip: If multiple lines share most properties, store them in a dictionary and use **dict inside plt.plot() to avoid repetition.
