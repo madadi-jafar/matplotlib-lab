@@ -5,3 +5,10 @@ import numpy as np
 np.random.seed(1)
 data = np.random.normal(50, 10, 1000)
 # TODO: Plot histogram
+
+# draw
+plt.hist(data, bins=20)
+
+# show
+plt.show()
+

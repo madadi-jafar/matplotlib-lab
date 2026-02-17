@@ -5,3 +5,9 @@ import numpy as np
 x = np.linspace(0, 10, 50)
 y = x ** 2
 # TODO: Create and show the plot
+
+#create
+plt.plot(x,y)
+
+#show
+plt.show()
