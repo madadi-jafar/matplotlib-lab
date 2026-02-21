@@ -7,3 +7,6 @@ x = np.random.randn(100)
 y = np.random.randn(100)
 colors = x + y
 # TODO: Create scatter with colormap and colorbar
+plt.scatter(x,y, c = colors,cmap ='cool')
+plt.colorbar(label = 'Intensity')
+plt.show()
