@@ -5,3 +5,6 @@ import numpy as np
 x = np.linspace(0, 100, 100)
 y = np.sqrt(x)
 # TODO: Plot and save figure
+plt.plot(x, y)
+plt.savefig("C:/Users/DELL/Desktop/matplotlib/matplotlib-lab/tasks/task7squarePlot.png", dpi=150)
+plt.show()

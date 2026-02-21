@@ -6,3 +6,10 @@ np.random.seed(0)
 x = np.random.rand(50)
 y = np.random.rand(50)
 # TODO: Make scatter plot with red "o" markers
+
+
+# make
+plt.scatter(x, y, color = 'red', marker ='o')
+
+# show
+plt.show()
